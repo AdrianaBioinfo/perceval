@@ -65,17 +65,17 @@ cd src/
 python main.py --help
 ```
 ```
-   -h, --help            show this help message and exit
+  -h, --help            show this help message and exit
   -path PATH_WORKING_DIRECTORY, --path_working_directory PATH_WORKING_DIRECTORY
                         Enter path of the working directory
   -output OUTPUT_PATH, --output_path OUTPUT_PATH
                         Enter path for the output folder
   -skp SKP_PREPROC, --skp_preproc SKP_PREPROC
-                        If 'yes' the preprocessing of the films is skip. Else set 'no'
+                        If "yes" the preprocessing of the films is skip. Else set "no"
   -atp_df ATPADP_F480_CD86_DF, --atpadp_f480_cd86_df ATPADP_F480_CD86_DF
-                        If skp is 'yes', enter the path of the atpadp/f480/cd86 dataframe
+                        If skp is "yes", enter the path of the atpadp/f480/cd86 dataframe
   -preds RUN_PREDICTIONS, --run_predictions RUN_PREDICTIONS
-                        Optional. Compute predictions. By default 'yes'. You can set it to 'no'
+                        Optional. Compute predictions. By default "yes". You can set it to "no"
 ```
 
 
