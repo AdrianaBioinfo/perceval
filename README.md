@@ -1,8 +1,18 @@
 # Perceval
 
-- Get individual crops from ATP:ADP, F480 and CD86 data -> Fiji macro
-- Get heatmaps of these data
-- Predict metabolic profil
+This script allows you to predict the metabolic profile of a cell from a pre-processed film (imagej macro). 
+
+You can get heatmaps of:
+-	 ATP:ADP ratio during time
+-	CD86
+-	F480
+
+You can also obtain F480 and CD86 histogram.
+
+**Quick start** (run the whole analysis):
+```
+python main.py -path folder_path
+```
 
 ## 	:zero: Prerequisites
 
@@ -77,5 +87,12 @@ python main.py --help
   -preds RUN_PREDICTIONS, --run_predictions RUN_PREDICTIONS
                         Optional. Compute predictions. By default "yes". You can set it to "no"
 ```
+To run the whole analysis (preprocessing, predictions...), the only required argument is the path of your data.
+```SHELL
+python main.py -path folder_path
+```
 
-
+If you already have preprocessed data (csv file) you can skip the preprocessing with:
+```SHELL
+python main.py -path folder_path -skp "yes" -atp_df path_preprocessed_df
+```
