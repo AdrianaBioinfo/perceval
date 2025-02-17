@@ -51,7 +51,7 @@ conda deactivate
 -----------------------
 ## :one: Running Analysis
 
-You must have all the data in one folder. The subfolders need to contain "ATPADP" or "F480" or "CD86" in their name. Otherwise they will not be included in the analysis.
+You must have all the data in one folder. The subfolders need to contain "ATPADP" or the marker(s) name(s). Otherwise they will not be included in the analysis.
 
 Ex: 
 ```SHELL
@@ -59,10 +59,10 @@ Sample_X/
   ├──sample_X_ATPADP/
   │       ├──sample_X_crop_1
   |       ├──sample_X_crop_n
-  ├──sample_X_F480/
+  ├──sample_X_Marker1/
   │       ├──sample_X_crop_1
   |       ├──sample_X_crop_n  
-  ├──sample_X_CD86/
+  ├──sample_X_Marker2/
           ├──sample_X_crop_1
           ├──sample_X_crop_n  
 
@@ -77,21 +77,10 @@ python main.py --help
   -h, --help            show this help message and exit
   -path PATH_WORKING_DIRECTORY, --path_working_directory PATH_WORKING_DIRECTORY
                         Enter path of the working directory
+  -markers MARKERS [MARKERS ...], --markers MARKERS [MARKERS ...]
+                        List of markers to process (e.g., ATPADP F480 CD86)
   -output OUTPUT_PATH, --output_path OUTPUT_PATH
-                        Enter path for the output folder
-  -skp SKP_PREPROC, --skp_preproc SKP_PREPROC
-                        If "yes" the preprocessing of the films is skip. Else set "no"
-  -atp_df ATPADP_F480_CD86_DF, --atpadp_f480_cd86_df ATPADP_F480_CD86_DF
-                        If skp is "yes", enter the path of the atpadp/f480/cd86 dataframe
+                        Optional. Enter path for the output folder. By default output folder = path
   -preds RUN_PREDICTIONS, --run_predictions RUN_PREDICTIONS
                         Optional. Compute predictions. By default "yes". You can set it to "no"
-```
-To run the whole analysis (preprocessing, predictions...), the only required argument is the path of your data.
-```SHELL
-python main.py -path folder_path
-```
-
-If you already have preprocessed data (csv file) you can skip the preprocessing with:
-```SHELL
-python main.py -path folder_path -skp "yes" -atp_df path_preprocessed_df
 ```
