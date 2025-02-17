@@ -1,17 +1,16 @@
-# Perceval
+# 🌈Perceval 
 
 This script allows you to predict the metabolic profile of a cell from a pre-processed film (imagej macro). 
 
-You can get heatmaps of:
--	 ATP:ADP ratio during time
--	CD86
--	F480
-
-You can also obtain F480 and CD86 histogram.
+The outputs are :
+- Heatmaps of ATP:ADP ratio over time and associated markers (maximum 2)
+- Histograms of markers
+- Pie chart representing the distribution of each metabolic class
+- Tracks plot colored by cluster
 
 **Quick start** (run the whole analysis):
 ```
-python main.py -path folder_path
+python main.py -path folder_path -markers ATPADP F480 CD86
 ```
 
 ## 	:zero: Prerequisites
