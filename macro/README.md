@@ -1,11 +1,11 @@
 # Perceval macro
 
-## Requirements
+## :zero: Requirements
 The macro was developed and tested with the following versions:
 - ImageJ : 2.16.0/1.54p
 - Java : 1.8.0_322
 
-## Running the Perceval macro
+## :one: Running the Perceval macro
 
 To run the Perceval macro, make sure you have a *.tiff* file with 2 to 4 channels.
 
