@@ -1,6 +1,6 @@
 # 🌈Perceval 
 
-This script allows you to predict the metabolic profile of a cell from a pre-processed film (imagej macro). 
+This script allows you to predict the metabolic profile of a cell from a pre-processed film ([Perceval macro)](https://github.com/AdrianaBioinfo/perceval/tree/main/macro). 
 
 The outputs are :
 - Heatmaps of ATP:ADP ratio over time and associated markers (maximum 2)
