@@ -318,7 +318,7 @@ if (markers.length == 4){
 	normalization();
 	to_crop_image = getImageID();
 	array_atpadp = markers[2]+ markers[0];
-	save_crop_add_border(indiv_crop_folder, to_crop_image, array_atpadp);
+	save_crop_add_border(to_crop_image, array_atpadp);
 	run("Select All");	
 	// MARKER +1
 	open(path + File.separator + markers[0]+"_channel_" + input_image_title);
@@ -390,7 +390,7 @@ if (markers.length == 2) {
 	normalization();
 	to_crop_image = getImageID();
 	array_atpadp = markers[1]+ markers[0];
-	save_crop_add_border(indiv_crop_folder, to_crop_image, array_atpadp);
+	save_crop_add_border(to_crop_image, array_atpadp);
 	run("Select All");
 	File.delete(path + File.separator + markers[0]+"_channel_" + input_image_title)
 	File.delete(path + File.separator + markers[1]+"_channel_" + input_image_title)
