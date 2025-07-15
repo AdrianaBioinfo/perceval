@@ -1,5 +1,6 @@
  				/* ------------ Perceval macro ------------  */
 
+
 #@ String(label="Markers (sort by channel number)", style="test field") markers_names
 #@ String(label="Save crops?", choices={"yes","no"}, style="radioButtonHorizontal") choice_crop
 #@ String(label="Normalize all the data?", choices={"yes","no"}, style="radioButtonHorizontal") choice_normalization
@@ -158,7 +159,7 @@ function normalization(){
 	}
 	run("16_colors");
 }
-function save_crop_add_border(indiv_crop_folder,to_crop_image, marker_name){
+function save_crop_add_border(to_crop_image, marker_name){
 	/*
 	  Save cropped images and add a border around the particles if specified.
 	  - If cropping is enabled, divides the image into 100x100 pixel sections and saves non-empty crops.
@@ -284,7 +285,7 @@ if (markers.length == 3){
 	crop_and_stack(blue_channel_stack);
 	run("Blue");
 	to_crop_image_blue = getImageID();
-	save_crop_add_border(indiv_crop_folder, to_crop_image_blue, markers[2]);
+	save_crop_add_border(to_crop_image_blue, markers[2]);
 	close("Results");
 	close("Result of red_channel");
 	close("blue_channel"); 
