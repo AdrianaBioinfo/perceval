@@ -72,7 +72,7 @@ function crop_and_stack(intermediate_image){
 	 - Each crop is resized to 100x100 pixels and combined with adjacent crops.
 	 - Add a black stack for empty areas.
 	 Input : Image 
-	 	intermediate_image_ID : The processed time-lapse images.
+	 	The processed time-lapse images.
 	 Return: Image
 	 	Time-lapse cell array
 	 */
@@ -169,8 +169,6 @@ function save_crop_add_border(to_crop_image, marker_name){
 	  Inputs: Image
 	  	The image to crop.
 	  		  String
-	  	indiv_crop_folder : Folder path to save individual crops.
-	  		  String
 	  	marker_name : The marker name used for output file naming.
 	 */
 	if (choice_crop == "yes"){
@@ -247,7 +245,7 @@ path = getDirectory("image");
 // Marker(s) analysis 
 markers = split(markers_names, ","); 
 // ----------- Obtain ATP:ADP ratio ---------------------   
-run("Options...", "iterations=1 count=1"); 
+run("Options...", "iterations=1 count=1");
 run("Smooth"); // remove noise
 // Get all the channels
 run("Split Channels");
