@@ -247,6 +247,7 @@ path = getDirectory("image");
 // Marker(s) analysis 
 markers = split(markers_names, ","); 
 // ----------- Obtain ATP:ADP ratio ---------------------   
+run("Options...", "iterations=1 count=1"); 
 run("Smooth"); // remove noise
 // Get all the channels
 run("Split Channels");
