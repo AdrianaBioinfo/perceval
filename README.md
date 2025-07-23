@@ -1,16 +1,20 @@
 # 🌈Perceval 
 
-This script allows you to predict the metabolic profile of a cell from a pre-processed film ([Perceval macro)](https://github.com/AdrianaBioinfo/perceval/tree/main/macro). 
+This project was carried out as part of the "Met-Vision" paper. 
 
-The outputs are :
+These scripts allow you to extract, interpret and classify functional metabolic information from live-cell imaging data with single-cell resolution. 
+In the [macro folder](https://github.com/AdrianaBioinfo/perceval/tree/main/macro) you will find the macro for displaying the single-cell view and the individual cell crops.
+Individual crops are used as input to the python pipeline.
+
+The outputs of the pipeline are :
+- Pie chart representing the distribution of each metabolic class
 - Heatmaps of ATP:ADP ratio over time and associated markers (maximum 2)
 - Histograms of markers
-- Pie chart representing the distribution of each metabolic class
 - Tracks plot colored by cluster
 
-**Quick start** (run the whole analysis):
+**Quick start** (run the whole Python analysis):
 ```
-python main.py -path folder_path -markers ATPADP F480 CD86
+python main.py -path path_to_individual_crops_folder -markers ATPADP F480 MHCII
 ```
 
 ## 	:zero: Prerequisites
@@ -51,20 +55,28 @@ conda deactivate
 -----------------------
 ## :one: Running Analysis
 
-You must have all the data in one folder. The subfolders need to contain "ATPADP" or the marker(s) name(s). Otherwise they will not be included in the analysis.
+You must have all the data in one folder. The subfolders need to contain "ATPADP" and the marker(s) name(s). Otherwise they will not be included in the analysis.
 
 Ex: 
 ```SHELL
-Sample_X/
-  ├──sample_X_ATPADP/
-  │       ├──sample_X_crop_1
-  |       ├──sample_X_crop_n
-  ├──sample_X_Marker1/
-  │       ├──sample_X_crop_1
-  |       ├──sample_X_crop_n  
-  ├──sample_X_Marker2/
-          ├──sample_X_crop_1
-          ├──sample_X_crop_n  
+Working_directory/
+  Sample_X/
+    ├──sample_X_ATPADP/
+    │       ├──sample_X_crop_1
+    |       ├──sample_X_crop_n
+    ├──sample_X_Marker1/
+    │       ├──sample_X_crop_1
+    |       ├──sample_X_crop_n  
+    ├──sample_X_Marker2/
+            ├──sample_X_crop_1
+            ├──sample_X_crop_n
+  Sample_Y/
+    ├──sample_Y_ATPADP/
+    │       ├──...
+    ├──sample_Y_Marker1/
+    │       ├──... 
+    ├──sample_Y_Marker2/
+            ├──...
 
 ```
 If you need help about inputs, you can use the --help command:
@@ -78,9 +90,11 @@ python main.py --help
   -path PATH_WORKING_DIRECTORY, --path_working_directory PATH_WORKING_DIRECTORY
                         Enter path of the working directory
   -markers MARKERS [MARKERS ...], --markers MARKERS [MARKERS ...]
-                        List of markers to process (e.g., ATPADP F480 CD86)
+                        List of markers to process (e.g., ATPADP F480 MHCII)
   -output OUTPUT_PATH, --output_path OUTPUT_PATH
                         Optional. Enter path for the output folder. By default output folder = path
   -preds RUN_PREDICTIONS, --run_predictions RUN_PREDICTIONS
                         Optional. Compute predictions. By default "yes". You can set it to "no"
 ```
+
+If you use the pipeline please cite the paper.
