@@ -36,16 +36,10 @@ cd perceval/
 ```
 
 Install Miniconda :  https://docs.conda.io/en/latest/miniconda.html#windows-installers.
-Once Miniconda is installed, install Mamba :
+Once Miniconda is installed, create the envrionment and load it :
 
 ```SHELL
-conda install mamba -n base -c conda-forge
-```
-
-Create the environment and load it :
-
-```SHELL
-mamba env create -f perceval_1.yml
+conda env create -f perceval_1.yml
 conda activate perceval_1
 ```
 If you want to deactivate the environment, use the command :
