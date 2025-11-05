@@ -26,7 +26,7 @@ To download python: https://www.python.org/downloads/. The version used for this
 Clone the repository:
 
 ```SHELL
-git clone https://github.com/Adri/embeddings_alignment.git
+git clone https://github.com/AdrianaBioinfo/embeddings_alignment.git
 ```
 
 Move to the new directory:
