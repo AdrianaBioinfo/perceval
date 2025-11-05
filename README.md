@@ -32,14 +32,14 @@ git clone https://github.com/AdrianaBioinfo/perceval.git
 Move to the new directory:
 
 ```SHELL
-cd perceval/
+cd perceval/src/
 ```
 
 Install Miniconda :  https://docs.conda.io/en/latest/miniconda.html#windows-installers.
 Once Miniconda is installed, create the envrionment and load it :
 
 ```SHELL
-conda env create -f perceval_1.yml
+conda env create -f env_perceval_1.yml
 conda activate perceval_1
 ```
 If you want to deactivate the environment, use the command :
